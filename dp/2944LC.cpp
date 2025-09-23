@@ -17,15 +17,26 @@ public:
         return dp[n];
     }
 };
+
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
+
     int t;
-    cin >> t;
+    cin >> t;  
     while (t--)
     {
-       
+        int n;
+        cin >> n; 
+        vector<int> prices(n);
+        for(int i = 0; i < n; ++i) {
+            cin >> prices[i];
+        }
+
+        Solution sol;
+        int result = sol.minimumCoins(prices);
+        cout << result << "\n";
     }
     return 0;
 }
